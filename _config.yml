@@ -38,10 +38,10 @@ paginate: 5
 footer-links:
   behance: # https://www.behance.net/<username>
   dribbble:
-  email: sbkyo88@gmail.com
-  facebook: https://www.facebook.com/kyo.jung.3
+  email:  sbkyo88@gmail.com
+  facebook:  https://www.facebook.com/kyo.jung.3
   flickr:
-  github: JuetEm/
+  github:  JuetEm/
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram: 
   linkedin:
@@ -94,7 +94,7 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  sass_dir: _sass ../_sass
+  sass_dir: _sass /_sass
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
