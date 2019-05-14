@@ -16,6 +16,21 @@ description: Developer's Slow Mind
 avatar: /images/IMG_0044.JPG
 
 
+# site Quthor사이트 저자 소개 추가 (https://devinlife.com/howto%20github%20pages/blog-config/)
+author:
+    name: "JuetEm"
+    avatar: "/images/IMG_0044.JPG"
+    bio: "주체적으로 개발해서 자주 독립 자주 성가!! 하고싶은 코딩은 즐겁다!"
+    location: "South Korea"
+    email: sbkyo88@gmail.com
+    links:
+        - lable: "Email"
+          icon: "fas fa-fw fa-envelope-squer"
+          url: mailto:sbkyo88@gmail.com
+        - label: "Website"
+          icon: "fas fa-fw fa-link"
+          url: "https://juetem.github.io"
+
 # Tabs in header. There are 'Blog', 'About', 'Archive', 'Tags'
 # and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
 # it from the list(Delete '- name: ' and 'url: ', too!)
@@ -39,7 +54,7 @@ footer-links:
   behance: # https://www.behance.net/<username>
   dribbble:
   email: sbkyo88@gmail.com
-  facebook: Kyo Jung
+  facebook: "Kyo Jung"
   flickr:
   github: JuetEm/
   googleplus: # anything in your profile username that comes after plus.google.com/
