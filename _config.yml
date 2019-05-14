@@ -35,7 +35,7 @@ navigation:
 paginate: 5
 
 # Includes an icon in the footer for each username you enter
-footer-links:
+footer-links: 
   behance: # https://www.behance.net/<username>
   dribbble:
   email: sbkyo88@gmail.com
