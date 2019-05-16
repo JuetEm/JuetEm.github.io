@@ -48,6 +48,12 @@ navigation:
   - name: Theme
     url: https://github.com/AWEEKJ/kiko-now
 
+
+# Collection 추가
+collections:
+    category: 
+        output: true
+
 # Pagination
 paginate: 5
 

@@ -27,7 +27,7 @@
 				<!-- {% if node.layout == "category" %} --> 
 				{% if node.layout == "post" %}
 					<li>
-						<a class="category-link {% if page.url == node.url %} active{% endif %} href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+						<a class="category-link {% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
 					</li>
 				{% endif %}
 			{% endif %}
