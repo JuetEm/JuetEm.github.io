@@ -51,7 +51,6 @@ navigation:
 
 # Collection 추가
 collections:
-    collections_dir: juetem_collections
     posts: 
         output: true
 
