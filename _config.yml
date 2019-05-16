@@ -39,10 +39,10 @@ navigation:
     url: /
   - name: About
     url: /about
-  - name: Category
-    url: /category
   - name: Archive
     url: /archive
+  - name: Category
+    url: /category
   - name: Tags
     url: /tags
   - name: Theme
