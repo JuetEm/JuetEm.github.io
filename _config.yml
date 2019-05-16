@@ -42,7 +42,7 @@ navigation:
   - name: Archive
     url: /archive
   - name: Category
-    url: /category_collections
+    url: /juetem_collections
   - name: Tags
     url: /tags
   - name: Theme
