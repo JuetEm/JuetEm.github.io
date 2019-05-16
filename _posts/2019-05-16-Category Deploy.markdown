@@ -2,7 +2,7 @@
 layout: post
 title:  "Category Deploy"
 date:   2019-05-16 10:30:34 +0900
-categories: jekyll update
+categories: Customizing Jekyll Blog
 ---
 `Jekyll을 이용한 블로그 작성` 외에도 `Flutter를 이용한 어플리케이션 만들기`도 역시 블로그 작성의 큰 이유중 하나기 때문에!!  
 
@@ -14,7 +14,7 @@ categories: jekyll update
 
 # 카테고리 만들기
 
-1. _layout 폴더에 category.htlm 파일 생성
+*  _layout 폴더에 category.htlm 파일 생성
 
 
 ```html
@@ -37,7 +37,38 @@ layout:  default
 
 ```
 
-2. _includes 폴더 index.html 파일 수정
+* _includes 폴더 index.html 파일 수정
+
+{% highlight language %}
+<ul class="site-category">
+		{% assign pages_list = site.pages %}
+		{% for node in pages_lsit %}
+			{% if node.title != null %}
+				{% if node.layout == "category" %}
+					<li>
+						<a class="category-link {% if page.url == node.url %} active{% endif %} href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+					</li>
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	  </ul>
+{% endhighlight %}
+
+* category 폴더 생성
+
+루트 디렉토리 폴더 안에 category 폴더를 만들어준 다음 원하는 카테고리 이름의 md(markdown) 파일을 생성
+
+`마크다운파일.md` 파일 예시
+
+```
+layout: category
+
+title: 마크다운파일 
+```
+
+* 블로그 포스트에 category 추가
+
+위 세가지 셋팅 후 작성하는 포스트의 맨 위(front matter)에 `categories: 카테고리명`을 추가해 주면 된다.
 
 ---
 References  
