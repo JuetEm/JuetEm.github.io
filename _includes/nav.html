@@ -24,8 +24,8 @@
 		{% assign pages_list = site.category %}
 		{% for node in pages_lsit %}
 			{% if node.title != null %}
-				<!-- {% if node.layout == "category" %} --> 
-				<!-- {% if node.layout == "post" %}
+				{% if node.layout == "category" %} 
+				{% if node.layout == "post" %}
 					<li>
 						<a class="category-link {% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
 					</li>
