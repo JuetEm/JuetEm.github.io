@@ -51,7 +51,7 @@ navigation:
 
 # Collection 추가
 collections:
-    posts: 
+    juetem_collections: 
         output: true
 
 # Pagination
