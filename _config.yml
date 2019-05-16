@@ -42,7 +42,7 @@ navigation:
   - name: Archive
     url: /archive
   - name: Category
-    url: /category
+    url: /category_collections
   - name: Tags
     url: /tags
   - name: Theme
@@ -51,7 +51,8 @@ navigation:
 
 # Collection 추가
 collections:
-    category: 
+    collections_dir: juetem_collections
+    posts: 
         output: true
 
 # Pagination
