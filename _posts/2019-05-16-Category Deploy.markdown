@@ -22,6 +22,7 @@ categories: Customizing Jekyll Blog
 layout:  default
 ---
 <ul class="posts-list">
+    {% raw %}
 	{% assign category = page.category | default: page.title %}
 	{% for post in site.categoryies[category] %}
 	<li>
@@ -33,13 +34,14 @@ layout:  default
 		</h3>
 	</li>
 	{% endfor %}
+	{% endraw %}
 </ul>
 
 ```
 
 * _includes 폴더 index.html 파일 수정
 
-{% highlight language %}
+{% highlight language linenos %}
 <ul class="site-category">
 		{% assign pages_list = site.pages %}
 		{% for node in pages_lsit %}
@@ -51,7 +53,7 @@ layout:  default
 				{% endif %}
 			{% endif %}
 		{% endfor %}
-	  </ul>
+</ul>
 {% endhighlight %}
 
 * category 폴더 생성
