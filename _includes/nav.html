@@ -21,7 +21,7 @@
       </nav>
 	  <!--  카테고리 추가를 위한 요소 작성 Start -->
 	  <ul class="site-category">
-		{% assign pages_list = site.pages %}
+		{% assign pages_list = site.category %}
 		{% for node in pages_lsit %}
 			{% if node.title != null %}
 				{% if node.layout == "category" %}
