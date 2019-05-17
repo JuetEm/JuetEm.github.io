@@ -31,11 +31,11 @@ permalink: /category/
 		{% endif %}
 	{% endunless %}
 	
-	{% if page.category %}
-	{{ page.category }}
-	{% else %}
-	No page.category
-	{% endif %}
+	{% for cat in site.categories %}
+		<h6>
+			{{ cat[0] }}{{ cat[1] }}
+		</h6>
+	{% endfor %}
 	
 	<li>
 	  {% if post.link %}
