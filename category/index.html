@@ -9,15 +9,16 @@ permalink: /category/
 {% endif %}
 
 <ul class="archive">
-  {% for categ in site.categories %}
+  {% for post in site.posts %}
 	{% unless post.next %}
 		<h2>{{ post.categories | categories: 'None' }}</h2>
 	{% else %}
 		{% capture category %}{{ post.categories | categories: 'None' }}{% endcapture %}
-      {% capture ncategory %}{{ post.next.categories | categories: 'None' }}{% endcapture %}
-      {% if category != ncategory %}
-        <h2>{{ post.categories | categories: 'None' }}</h2>
-      {% endif %}
+		{% capture ncategory %}{{ post.next.categories | categories: 'None' }}{% endcapture %}
+		{{ category }}{{ ncategory }}
+		{% if category != ncategory %}
+			<h2>{{ post.categories | categories: 'None' }}</h2>
+		{% endif %}
 	{% endunless %}
 	
 	<li>
