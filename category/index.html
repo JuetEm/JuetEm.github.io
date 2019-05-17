@@ -9,8 +9,8 @@ permalink: /category/
 {% endif %}
 
 <ul class="archive">
-  {% if site.posts %}
-	{% for categ in site.categories %}
+  {% assign post = site.posts %}
+  {% for categ in site.categories %}
       <h2>{{ post.categories | categories: 'None' }}</h2>
 
     <li>
@@ -23,6 +23,5 @@ permalink: /category/
       </a>
       <time>{{ post.date | date: "%Y-%m-%d" }}</time>
     </li>
-	{% endfor %}
-  {% endif %}
+  {% endfor %}
 </ul>
