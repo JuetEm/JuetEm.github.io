@@ -26,7 +26,7 @@
   <ul>
 	{% assign pages_list = site.pages %}
 	{% for cat in site.categories %}
-		<h6>{{ cat.text }}{{ cat.url }}{{ cat.title }}</h6>
+		<h6>{{ cat.text }}{{ cat.url }}{{ cat.title }}{{ cat.categories }}</h6>
 	{% endfor %}
 	<script>
 		var site = "test log";
@@ -35,7 +35,7 @@
 	</script>
 	{% for node in pages_list %}
 		{% if node.title != null%}
-			{% if node.layout == "post" %}
+			{% if node.layout == "category" %}
 				<li><a class="category-link {% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></li>
 			{% endif %}
 		{% endif %}
