@@ -9,19 +9,23 @@ permalink: /category/
 {% endif %}
 
 <ul class="archive">
-  {% assign post = site.posts %}
   {% for categ in site.categories %}
-      <h2>{{ post.categories | categories: 'None' }}</h2>
+		{% for post in site.posts %}
+		{% assign category = categ.categories %}
+			{% if post.categories == category %}
+				  <h2>{{ post.categories | categories: 'None' }}</h2>
 
-    <li>
-      {% if post.link %}
-      <a href="{{ post.link }}">
-      {% else %}
-      <a href="{{ site.baseurl }}{{ post.url }}">
-      {% endif %}
-        {{ post.title }}
-      </a>
-      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-    </li>
+				<li>
+				  {% if post.link %}
+				  <a href="{{ post.link }}">
+				  {% else %}
+				  <a href="{{ site.baseurl }}{{ post.url }}">
+				  {% endif %}
+					{{ post.title }}
+				  </a>
+				  <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+				</li>
+			{% endif %}
+		{% endfor %}
   {% endfor %}
 </ul>
