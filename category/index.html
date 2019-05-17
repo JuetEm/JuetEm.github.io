@@ -9,6 +9,17 @@ permalink: /category/
 {% endif %}
 
 <ul class="archive">
+	<ul class="label">
+    {% for category in site.categories %}
+    <li>
+      <a href="#{{ category[0] }}">
+        <span>{{ category[0] }}</span>
+        <span class="count">{{ category[1] | size }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  
 	  {% for post in site.posts %}
 		{% unless post.next %}
 			<h2>{{ post.categories | categories: 'None' }}</h2>
@@ -19,11 +30,13 @@ permalink: /category/
 				<h2>{{ post.categories | categories: 'None' }}</h2>
 			{% endif %}
 		{% endunless %}
+		
 		{% if page.category %}
 		{{ page.category }}
 		{% else %}
 		No page.category
 		{% endif %}
+		
 		<li>
 		  {% if post.link %}
 		  <a href="{{ post.link }}">
