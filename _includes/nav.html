@@ -26,7 +26,7 @@
   <ul>
 	{% assign pages_list = site.pages %}
 	{% for cat in site.categories %}
-		<h6>{{ cat }}</h6>
+		<h6>{{ cat.text }}{{ cat.url }}{{ cat.title }}</h6>
 	{% endfor %}
 	<script>
 		var site = "test log";
