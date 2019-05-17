@@ -9,7 +9,6 @@ permalink: /category/
 {% endif %}
 
 <ul class="archive">
-	{{ page.category }}
 	  {% for post in site.posts %}
 		{% unless post.next %}
 			<h2>{{ post.categories | categories: 'None' }}</h2>
@@ -20,7 +19,11 @@ permalink: /category/
 				<h2>{{ post.categories | categories: 'None' }}</h2>
 			{% endif %}
 		{% endunless %}
-		
+		{% if page.category %}
+		{{ page.category }}
+		{% else %}
+		No page.category
+		{% endif %}
 		<li>
 		  {% if post.link %}
 		  <a href="{{ post.link }}">
