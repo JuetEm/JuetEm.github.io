@@ -25,7 +25,7 @@
   WHAT'S UP WITH MY CATEGORY?
   <ul>
 	{% assign pages_list = site.pages %}
-	{% for cat in pages_list.categories %}
+	{% for cat in site.categories %}
 		{{ cat.title }}
 	{% endfor %}
 	<script>
