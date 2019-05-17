@@ -9,26 +9,27 @@ permalink: /category/
 {% endif %}
 
 <ul class="archive">
-  {% for post in site.posts %}
-	{% unless post.next %}
-		<h2>{{ post.categories | categories: 'None' }}</h2>
-	{% else %}
-		{% capture category %}{{ post.categories | categories: 'None' }}{% endcapture %}
-		{% capture ncategory %}{{ post.next.categories | categories: 'None' }}{% endcapture %}
-		{% if category != ncategory %}
+	{{ page.category }}
+	  {% for post in site.posts %}
+		{% unless post.next %}
 			<h2>{{ post.categories | categories: 'None' }}</h2>
-		{% endif %}
-	{% endunless %}
-	
-	<li>
-	  {% if post.link %}
-	  <a href="{{ post.link }}">
-	  {% else %}
-	  <a href="{{ site.baseurl }}{{ post.url }}">
-	  {% endif %}
-		{{ post.title }}
-	  </a>
-	  <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-	</li>
-  {% endfor %}
+		{% else %}
+			{% capture category %}{{ post.categories | categories: 'None' }}{% endcapture %}
+			{% capture ncategory %}{{ post.next.categories | categories: 'None' }}{% endcapture %}
+			{% if category != ncategory %}
+				<h2>{{ post.categories | categories: 'None' }}</h2>
+			{% endif %}
+		{% endunless %}
+		
+		<li>
+		  {% if post.link %}
+		  <a href="{{ post.link }}">
+		  {% else %}
+		  <a href="{{ site.baseurl }}{{ post.url }}">
+		  {% endif %}
+			{{ post.title }}
+		  </a>
+		  <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+		</li>
+	  {% endfor %}
 </ul>
