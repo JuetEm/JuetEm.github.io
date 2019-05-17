@@ -9,7 +9,7 @@ permalink: /category/
 {% endif %}
 
 <ul class="archive">
-  {% if post in site.posts %}
+  {% if site.posts %}
 	{% for categ in site.categories %}
       <h2>{{ post.categories | categories: 'None' }}</h2>
 
