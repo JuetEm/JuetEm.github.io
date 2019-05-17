@@ -9,7 +9,13 @@ layout: default
     <span class="date">
       {{ page.date | date: "%Y-%m-%d" }}
     </span>
-
+	<!-- category 표시 추가 Start -->
+	{% if page.categories %}
+	<span>
+		{{ page.categories }}
+	</span>
+	{% endif %}
+	<!-- category 표시 추가 Stop -->
     <ul class="tag">
       {% for tag in page.tags %}
       <li>
