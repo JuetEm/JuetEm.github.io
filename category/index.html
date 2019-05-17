@@ -31,12 +31,6 @@ permalink: /category/
 		{% endif %}
 	{% endunless %}
 	
-	{% for cat in site.categories %}
-		<h6>
-			{{ cat[0] }}{{ cat[1] }}
-		</h6>
-	{% endfor %}
-	
 	<li>
 	  {% if post.link %}
 	  <a href="{{ post.link }}">
