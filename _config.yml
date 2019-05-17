@@ -42,7 +42,7 @@ navigation:
   - name: Archive
     url: /archive
   - name: Category
-    url: /categories
+    url: /category
   - name: Tags
     url: /tags
   - name: Theme
