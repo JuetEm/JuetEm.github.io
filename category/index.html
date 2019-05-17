@@ -15,7 +15,6 @@ permalink: /category/
 	{% else %}
 		{% capture category %}{{ post.categories | categories: 'None' }}{% endcapture %}
 		{% capture ncategory %}{{ post.next.categories | categories: 'None' }}{% endcapture %}
-		{{ category }}{{ ncategory }}
 		{% if category != ncategory %}
 			<h2>{{ post.categories | categories: 'None' }}</h2>
 		{% endif %}
