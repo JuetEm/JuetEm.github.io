@@ -29,6 +29,7 @@ permalink: /category/
 	{% for post in site.posts %}
 	포스트 로직 적용 전 1
 	{{ post | sort: 'categories' }}
+	{{ post.categories }}
 	포스트 로직 적용 후 1
 	{% unless post.next %}
 		<h2>{{ post.categories | categories: 'None' }}</h2>
