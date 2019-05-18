@@ -27,7 +27,7 @@ permalink: /category/
 
 <ul class="archive">  	
 	{% for post in site.posts | sort: 'categories' %}
-	{% post | sort: 'categories' %}
+	{{ post | sort: 'categories' }}
 	{% unless post.next %}
 		<h2>{{ post.categories | categories: 'None' }}</h2>
 	{% else %}
