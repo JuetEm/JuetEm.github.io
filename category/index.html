@@ -26,11 +26,14 @@ permalink: /category/
 </ul>
 
 <ul class="archive">  	
-	{% for post in site.posts.sort_by(categories) %}
-	포스트 로직 적용 전 2
+	{% for post in site.posts.sort_by(:categories) %}
+	포스트 로직 적용 전 3
 	{{ post | sort: 'categories' }}
 	{{ post.categories }}
-	포스트 로직 적용 후 2
+	{% for item in post.items %}
+		{{ item.title }}
+	{% endfor %}
+	포스트 로직 적용 후 3
 	{% unless post.next %}
 		<h2>{{ post.categories | categories: 'None' }}</h2>
 	{% else %}
