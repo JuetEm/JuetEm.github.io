@@ -19,12 +19,15 @@ permalink: /category/
 	{% endfor %}
 </ul>
 
+<ul>
 {% for test in site.post.categories | sort %}
-	<h6>{{ test[0] }}</h6>
+	<li>{{ test[0] }}</li>
 {% endfor %}
+</ul>
 
 <ul class="archive">  	
 	{% for post in site.posts | sort: 'categories' %}
+	{% post | sort: 'categories' %}
 	{% unless post.next %}
 		<h2>{{ post.categories | categories: 'None' }}</h2>
 	{% else %}
