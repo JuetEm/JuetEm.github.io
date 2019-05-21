@@ -2,7 +2,8 @@
 layout: post
 title:  "First Post Jekyll!"
 date:   2019-05-10 17:31:34 +0900
-categories: "Customizing Jekyll Blog"
+categories: 
+	- Customizing Jekyll Blog
 tags:
     - jekyll
     - github
