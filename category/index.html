@@ -1,55 +1,23 @@
 ---
 layout: page
-title: Category
 permalink: /category/
+title: Categories
 ---
 
-{% if site.posts.size == 0 %}
-  <h2>No Category found</h2>
-{% endif %}
-
-<ul class="label">
-	{% for category in site.categories %}
-	<li>
-	  <a href="#{{ category[0] }}">
-		<span>{{ category[0] }}</span>
-		<span class="count">{{ category[1] | size }}</span>
-	  </a>
-	</li>
-	{% endfor %}
-</ul>
-
-<ul>
-{% for test in site.post.categories | sort %}
-	<li>{{ test[0] }}</li>
+<div id="archives">
+{% for category in site.categories %}
+	<div class="archive">
+		{% capture category_name %}{{ category | first }}{% endcapture %}
+		<div id="#{{ category_name | slugize}}"></div>
+		<p></p>
+		
+		<h3 class="category-head">{{ category_name }}</h3>
+		<a name="{{ category_name | slugize }}"></a>
+		{% for post in site.categories[category_name] %}
+		<article class="archive">
+			<h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+			<h5><time>{{ post.date | date: "%Y-%m-%d" }}</time></h5>
+		</article>
+	</div>
 {% endfor %}
-</ul>
-
-<ul class="archive">  	
-	{% for post in site.posts | group_by: 'categories' %}
-	포스트 로직 적용 전 4
-	{{ post | sort: 'categories' }}
-	{{ post.categories }}
-	포스트 로직 적용 후 4
-	{% unless post.next %}
-		<h2>{{ post.categories | categories: 'None' }}</h2>
-	{% else %}
-		{% capture category %}{{ post.categories | categories: 'None' }}{% endcapture %}
-		{% capture ncategory %}{{ post.next.categories | categories: 'None' }}{% endcapture %}
-		{% if category != ncategory %}
-			<h2>{{ post.categories | categories: 'None' }}</h2>
-		{% endif %}
-	{% endunless %}
-	
-	<li>
-	  {% if post.link %}
-	  <a href="{{ post.link }}">
-	  {% else %}
-	  <a href="{{ site.baseurl }}{{ post.url }}">
-	  {% endif %}
-		{{ post.title }}
-	  </a>
-	  <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-	</li>
-  {% endfor %}
-</ul>
+</div>
