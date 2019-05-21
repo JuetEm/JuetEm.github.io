@@ -8,6 +8,7 @@ tags:
     - jekyll
     - category
     - blog
+comments: true
 ---
 카테고리를 만들자!!  
 
