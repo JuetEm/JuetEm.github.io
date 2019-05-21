@@ -3,7 +3,7 @@ layout: post
 title:  "Category Deploy"
 date:   2019-05-16 10:30:34 +0900
 categories:
-	- Customizing Jekyll Blog
+    - Customizing Jekyll Blog
 tags:
     - jekyll
     - category
