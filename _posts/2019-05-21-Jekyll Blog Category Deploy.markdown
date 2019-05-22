@@ -8,9 +8,11 @@ tags:
     - category
     - customizing
     - tag
+	- jekyll
+	- blog
 ---
 
-# **Jekyll Blog 에 Category를 추가해보자!!**
+**Jekyll Blog 에 Category를 추가해보자!!**
 
 기존에 [Category Deploy](https://juetem.github.io/Category-Deploy/) 라는 글을 작성하면서 몇몇 블로그를 참고하여 카테고리 적용을 시도하였지만!! 실패를 하였습니다.  
 
@@ -50,14 +52,60 @@ tags:
 ## **2. Category 추가하기!**
 
 - #### **개요**
+<a href="#카테고리-추가-방식">2.0 카테고리 추가 방식</a>  
+<a href="#config-편집">2.1 _config.yml 편집</a>  
+<a href="#fron-matter에-categories-추가">2.2 post파일 fron matter에 categories 추가</a>  
+2.3 카테고리 폴더 및 index.html 생성  
 
+
+- <h4 id="카테고리-추가-방식"><strong>2.0 카테고리 추가 방식</strong></h4>
+
+> \- 단순한 방식으로 카테고리를 추가 하였습니다. <br> - 블로그 기본 페이지 상단에 위치한 네비게이션 바에 카테고리 매뉴를 추가합니다. <br> - 카테고리 매뉴를 클릭하면 Category 별 post 목록이 뿌려지는 화면으로 이동합니다.<br> - 카테고리 화면에서 포스트의 제목을 누르면 해당 포스트로 이동하여 포스트를 읽어볼 수 있습니다.
+
+
+- <h4 id="config-편집"><strong>2.1 _config.yml 편집</strong></h4>
+
+Jekyll 은 테마를 선택해서 쉽게 적용할 수 있다는 장점이 있습니다.  
+
+`Jekyll Themes`  <https://jekyllthemes.org>  
+
+이 블로그는 [kiko-now][키코 나우 페이지]라는 테마 템플렛을 커스터마아징 해서 사용하려고 합니다.  
+이 테마에는 기본적으로 네비게이션 바가 적용되어 있습니다.  
+`_config.yml` 파일의 navigation 설정부에 카테고리 관련 설정을 추가해주면 바로 카테고리가 네비게이션 바에 생겨나게 됩니다.
+
+```
+name: Category
+url: /category
+```
+
+> ![_config.yml - nav 설정 영역에 category 추가]({{ site.baseurl }}/images/nav_add_category_edit.png)
+
+`_config.yml` 파일에 설정 된 변수명들과 설정 방식이 조금 다르니 navigation 관련 설정부를 잘 찾아보세요.  
+ <u>navigation 이 애초에 존재하지 않으면 적용 방법을 찾아보거나, 다른 방식으로 카테고리를 적용 하셔야 합니다.</u>
+ 
+ 
+ - <h4 id="fron-matter에-categories-추가"><strong>2.2 post파일 fron matter에 categories 추가</strong></h4>
+ 
+ `_posts` 폴더 안에 들어있는 md 혹은 markdown 확장자의 포스트 작성 파일의 맨위 front matter 부분에 카테고리 관련 설정을 해줍니다.
+ 
+ ```
+ categories:
+    - Customizing Jekyll Blog(카테고리명)
+ ```
+ 
+ > ![post front matter에 categories: 카테고리 추가]({{site.baseurl}}/images/post_front_matter_category_edit.png)
+ 
+ post에 설정한 front matter의 변수를 site 전역변수로 읽어서 다음 화면에 뿌려주게 된답니다.
+ 
+ 
 
 -----------------------------
-> **References**
->> 1. [Category 적용 - Webjeda 블로그][웹제다 외국 블로그]
->> 2. [Django 템플릿 언어 이해 - 잉고래님의 블로그][템플릿 언어]
->> 3. [Jekyll 변수 - Jekyll 한국어 공식 홈페이지][지킬 변수]
+**References**
+1. [Category 적용 - Webjeda 블로그][웹제다 외국 블로그]
+2. [Django 템플릿 언어 이해 - 잉고래님의 블로그][템플릿 언어]
+3. [Jekyll 변수 - Jekyll 한국어 공식 홈페이지][지킬 변수]
 
+[키코 나우 페이지]: https://aweekj.github.io/kiko-now/ 
 [웹제다 외국 블로그]: https://blog.webjeda.com/jekyll-categories/
 [템플릿 언어]: https://ingorae.tistory.com/401 
 [지킬 변수]: https://jekyllrb-ko.github.io/docs/variables/ 
