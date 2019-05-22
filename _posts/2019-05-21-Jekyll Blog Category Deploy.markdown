@@ -10,6 +10,7 @@ tags:
     - tag
 	- jekyll
 	- blog
+comments: true
 ---
 
 **Jekyll Blog 에 Category를 추가해보자!!**
