@@ -13,7 +13,7 @@ tags:
 comments: true
 ---
 
-**Jekyll Blog 에 Category를 추가해보자!!**
+Jekyll Blog 에 Category를 추가해보자!!
 
 기존에 [Category Deploy](https://juetem.github.io/Category-Deploy/) 라는 글을 작성하면서 몇몇 블로그를 참고하여 카테고리 적용을 시도하였지만 <strong>실패!!</strong> 하였습니다.  
 
@@ -25,7 +25,7 @@ comments: true
 
 <u>위 두 내용에 대해서는 <i><strong>간단히 각 개념만 살짝</strong></i> 건드리고 각각에 대한 포스트는 따로 작성해보도록 하겠습니다.</u>
 
-이해가 급하신 분은 아래 **References**를 먼저 참고해주세요! 
+이해가 급하신 분은 아래 <a href="#references"><strong>References</strong></a>를 먼저 참고해주세요! 
 
 ## **1. 개념 간단히 잡기!**
 
@@ -84,6 +84,10 @@ url: /category
 ```
 
 > ![_config.yml - nav 설정 영역에 category 추가]({{ site.baseurl }}/images/nav_add_category_edit.png)
+
+> ![navigation Bar 영역에 category 메뉴 추가]({{site.baseurl}}/images/generated category.png)
+
+이제 네비게이션 바에서 `Category` 매뉴를 클릭하면 앞서 `_config.yml` 파일에 해당 이름(Category)의 `url` 경로로 설정해 둔 `/category`로 이동하게 됩니다. 
 
 `_config.yml` 파일에 설정 된 변수명들과 설정 방식이 조금 다르니 navigation 관련 설정부를 잘 찾아보세요.  
 <u>navigation 이 애초에 존재하지 않으면 적용 방법을 찾아보거나, 다른 방식으로 카테고리를 적용 하셔야 합니다.</u>
@@ -166,10 +170,45 @@ categories: [my-post-category1, my-post-category2, my-post-category3]
 
 - <h4 id="카테고리-폴더-인덱스-생성"><strong>2.3 카테고리 폴더 및 index.html 생성</strong></h4>
 
+_config.yml 에 baseurl로 설정하신 경로에 category 폴더를 생성해줍니다.  baseurl에 아무 값도 설정하지 않았다거나 `/`로 설정 했다면 블로그 프로젝트 폴더에 생성해주시면 됩니다. 아래 사진처럼 (*언더바로 시작하는*) 기본적인 Jekyll 블로그 구성 요소 폴더들과 같은 경로에 생성해주세요.
+
+> ![baseurl 경로에 category 폴더 생성]({{site.baseurl}}/images/category 폴더 추가.png)
+
+블로그 프로젝트 디렉토리에 category 폴더를 생성하셨다면 이제 그 안에 `index.html` 파일을 만들어 줄 차례입니다.
+
+```html
+---
+layout: page
+permalink: /category/
+title: Category
+---
+
+{% raw %}
+<div id="archives">
+{% for category in site.categories %}
+	<div class="archive">
+		{% capture category_name %}{{ category | first }}{% endcapture %}
+		<div id="#{{ category_name | slugize}}"></div>
+		<p></p>
+		
+		<h2 class="category-head">{{ category_name }}</h2>
+		<a name="{{ category_name | slugize }}"></a>
+		{% for post in site.categories[category_name] %}
+		<article class="archive">
+			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+			<time>{{ post.date | date: "%Y-%m-%d" }}</time>
+		</article>
+		{% endfor %}
+	</div>
+{% endfor %}
+</div>
+{% endraw %}
+```
+
 
 
 -----------------------------
-**References**
+<h2><strong id="references">References</strong></h2>
 1. [Category 적용 - Webjeda 블로그][웹제다 외국 블로그]
 2. [Django 템플릿 언어 이해 - 잉고래님의 블로그][템플릿 언어]
 3. [Jekyll 변수 - Jekyll 한국어 공식 홈페이지][지킬 변수]
