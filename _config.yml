@@ -50,9 +50,9 @@ navigation:
 
 
 # Collection 추가
-collections:
-    juetem_collections: 
-        output: true
+#collections:
+#    juetem_collections: 
+#        output: true
 
 # Pagination
 paginate: 5
