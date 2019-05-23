@@ -15,13 +15,15 @@ comments: true
 
 **Jekyll Blog 에 Category를 추가해보자!!**
 
-기존에 [Category Deploy](https://juetem.github.io/Category-Deploy/) 라는 글을 작성하면서 몇몇 블로그를 참고하여 카테고리 적용을 시도하였지만!! 실패를 하였습니다.  
+기존에 [Category Deploy](https://juetem.github.io/Category-Deploy/) 라는 글을 작성하면서 몇몇 블로그를 참고하여 카테고리 적용을 시도하였지만 <strong>실패!!</strong> 하였습니다.  
 
-참고한 자료들에 문제가 있었던 것이 아니라 제가 Jekyll과 템플릿 언어에 대한 이해가 부족해서 그런 것으로 밝혀졌습니다.   
+참고한 자료들에 문제가 있었던 것이 아니라, Jekyll과 템플릿 언어에 대한 이해가 부족했습니다.   
 
-적어도!! **템플릿 언어**에 대한 기본적인 이해와 Jekyll 블로그가 가지고 있는 **변수**의 내용과 사용방법에 대한 개념 정도는 필요했습니다.
+적어도!! 
 
-<u><i><strong>간단히 각 개념만 살짝</strong></i> 건드리고 각각에 대한 포스트는 따로 작성해보도록 하겠습니다.</u>
+**템플릿 언어**에 대한 기본적인 이해와 Jekyll 블로그가 가지고 있는 **변수**의 내용과 사용방법에 대한 개념 정도는 필요했습니다.
+
+<u>위 두 내용에 대해서는 <i><strong>간단히 각 개념만 살짝</strong></i> 건드리고 각각에 대한 포스트는 따로 작성해보도록 하겠습니다.</u>
 
 이해가 급하신 분은 아래 **References**를 먼저 참고해주세요! 
 
@@ -49,6 +51,8 @@ comments: true
 포스트 변수|`post.title`|Post의 Front Matter에 설정된 포스트의 제목(title)
 포스트 변수|`post.date`|Post의 Front Matter에 설정된 포스트의 날짜(date)
 ---|---|---
+
+[Jekyll 공식 홈페이지 변수 설명 페이지의 링크][지킬 변수]에서 자세한 내용 확인 하실 수 있으니, 한 번 둘러보시길 권해드립니다.
 
 ## **2. Category 추가하기!**
 
