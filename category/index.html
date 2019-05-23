@@ -8,11 +8,11 @@ title: Category
 {% for category in site.categories %}
 	<div class="archive">
 		{% capture category_name %}{{ category | first }}{% endcapture %}
-		<div id="#{{ category_name | slugize}}"></div>
+		<div id="#{{ category_name | slugify}}"></div> <!-- slugize 에서 slugify로 필터 변경, slugize 같은 필터는 감색이 아니되던데?!?! -->
 		<p></p>
 		
 		<h2 class="category-head">{{ category_name }}</h2>
-		<a name="{{ category_name | slugize }}"></a>
+		<a name="{{ category_name | slugify }}"></a>
 		{% for post in site.categories[category_name] %}
 		<article class="archive">
 			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
