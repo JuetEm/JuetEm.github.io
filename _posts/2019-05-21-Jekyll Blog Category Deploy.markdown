@@ -72,7 +72,7 @@ comments: true
 
 Jekyll 은 테마를 선택해서 쉽게 적용할 수 있다는 장점이 있습니다.  
 
-`Jekyll Themes`  [jekyllthemes.org](jekyllthemes.org)  
+`Jekyll Themes` 주소 : [jekyllthemes.org](jekyllthemes.org)  
 
 이 블로그는 [kiko-now][키코 나우 페이지]라는 테마 템플렛을 커스터마아징 해서 사용하려고 합니다.  
 이 테마에는 기본적으로 네비게이션 바가 적용되어 있습니다.  
