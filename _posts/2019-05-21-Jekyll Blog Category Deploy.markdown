@@ -60,7 +60,7 @@ comments: true
 <a href="#카테고리-추가-방식">2.0 카테고리 추가 방식</a>  
 <a href="#config-편집">2.1 _config.yml 편집</a>  
 <a href="#fron-matter에-categories-추가">2.2 post파일 front matter에 categories 추가</a>  
-2.3 카테고리 폴더 및 index.html 생성  
+<a href="#카테고리-폴더-인덱스-생성">2.3 카테고리 폴더 및 index.html 생성</a>   
 
 
 - <h4 id="카테고리-추가-방식"><strong>2.0 카테고리 추가 방식</strong></h4>
@@ -92,6 +92,25 @@ url: /category
 - <h4 id="fron-matter에-categories-추가"><strong>2.2 post파일 front matter에 categories 추가</strong></h4>
 
 `_posts` 폴더 안에 들어있는 md 혹은 markdown 확장자의 포스트 작성 파일의 맨위 front matter 부분에 카테고리 관련 설정을 해줍니다.
+
+**잠깐!! front matter 란?**
+> `front matter` 란 Jekyll에서 포스트/페이지를 관리하는데 사용하는 YAML 방식의 문서의 헤더 양식입니다.
+
+```
+---
+layout: post // post, page 중 하나를 넣어 이것이 한 페이지에 속하는 블로그 포스트인지, 홈페이지를 구성하는 하나의 큰 페이지인지를 결정합니다.
+title: "제목" // 포스트나 피이지의 제목을 넣습니다.
+date: 2019-05-20 11:28:22 +0900
+modified: 2019-05-21 14:32:34 +0900
+categories: 카테고리명 // 어느 카테고리에 속하는지 표시합니다.
+excerpt: "요약문" // 페이지에 대한 요약문을 작성합니다.
+tags: [태그명] // 해당 포스트의 태그를 지정해줍니다.
+comments: true // 댓글 기능을 사용할지 결정합니다. 별도의 댓글 기능 적용 후에 사용 가능합니다.
+---
+```
+> _참고자료 : [Uno's Blog][Front Matter]_
+
+우리가 작성/추가 해야하는 카테고리 관련 front matter 설정 내용은 다음과 같습니다. 
  
 ```
 categories:
@@ -102,6 +121,51 @@ categories:
  
 post에 설정한 front matter의 변수를 site 전역변수로 읽어서 다음 화면에 뿌려주게 된답니다.
 
+**여기서 Tip!! categories 설정 방법** 
+
+post의 front matter에 categories를 설정해주는 방법은 한 가지가 아닙니다.
+(tags도 마찬가지입니다.)
+
+앞서 작성한 `front matter란?` 의 에시와 그 아래에 `우리가 작성...다음과 같습니다.`의 categories 설정 방식이 서로 다른 것을 확인하셨을 텐데요.
+
+일반적인 문서에서는 보통 다음과 같이 카테고리 추가 방법을 설명합니다.
+
+__방식1__
+```
+---
+categories: [category1, category2, category3]
+---
+```
+
+제가 제시한 방식은 다음과 같습니다.
+
+__방식2__
+```
+---
+categories:
+    - my post category1
+    - my post category2
+    - my post category3
+---
+```
+
+차이점이 보이시나요?
+
+`방식1`은 주로 하나의 단어로 category를 설정할 때 사용합니다. `방식2`는 카테고리의 이름이 여러 단어로 되어 있을 때 사용합니다.
+
+`방식1`에서도 여러 단어의 카테고리명이 설정 가능한 경우도 있다고 하는데, 저는 전부 안되어서 `방식2`를 사용하고 있습니다. 여러 단어일 경우 단어들 사이의 공백을 `-(하이픈)` 등으로 이어서 사용하라고 하더군요.
+
+__방식1-1__
+```
+---
+categories: [my-post-category1, my-post-category2, my-post-category3]
+---
+```
+
+여기까지 post 파일 front matter에 categories 설정이 되었다면, 이제는 템플릿 코드를 작성해서 블로그의 카테고리를 읽어볼 차례입니다.
+
+- <h4 id="카테고리-폴더-인덱스-생성"><strong>2.3 카테고리 폴더 및 index.html 생성</strong></h4>
+
 
 
 -----------------------------
@@ -109,8 +173,12 @@ post에 설정한 front matter의 변수를 site 전역변수로 읽어서 다�
 1. [Category 적용 - Webjeda 블로그][웹제다 외국 블로그]
 2. [Django 템플릿 언어 이해 - 잉고래님의 블로그][템플릿 언어]
 3. [Jekyll 변수 - Jekyll 한국어 공식 홈페이지][지킬 변수]
+4. [Jekyll Front Matter 및 다수 - Uno's Blog][Front Matter]
+5. [Category 설정 방식의 차이 - Nolboo's Blog][카테고리 설정]
 
 [키코 나우 페이지]: https://aweekj.github.io/kiko-now/ 
 [웹제다 외국 블로그]: https://blog.webjeda.com/jekyll-categories/
 [템플릿 언어]: https://ingorae.tistory.com/401 
 [지킬 변수]: https://jekyllrb-ko.github.io/docs/variables/ 
+[Front Matter]: https://djkeh.github.io/articles/Hangul-test-jekyll-tips-kor/ 
+[카테고리 설정]: https://nolboo.kim/blog/2014/01/09/upgrade-jekyll-github-blog/#%ED%83%9C%EA%B7%B8%EC%99%80-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC 
