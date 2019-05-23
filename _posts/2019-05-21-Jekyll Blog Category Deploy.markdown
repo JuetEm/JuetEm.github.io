@@ -123,7 +123,7 @@ categories:
  
 > ![post front matter에 categories: 카테고리 추가]({{site.baseurl}}/images/post_front_matter_category_edit.png)
  
-post에 설정한 front matter의 변수를 site 전역변수로 읽어서 다음 화면에 뿌려주게 된답니다.
+post에 설정한 front matter의 변수를 site 전역변수로 읽어서 카테고리 화면에 뿌려주게 된답니다.
 
 **여기서 Tip!! categories 설정 방법** 
 
@@ -172,7 +172,7 @@ categories: [my-post-category1, my-post-category2, my-post-category3]
 
 _config.yml 에 baseurl로 설정하신 경로에 category 폴더를 생성해줍니다.  baseurl에 아무 값도 설정하지 않았다거나 `/`로 설정 했다면 블로그 프로젝트 폴더에 생성해주시면 됩니다. 아래 사진처럼 (*언더바로 시작하는*) 기본적인 Jekyll 블로그 구성 요소 폴더들과 같은 경로에 생성해주세요.
 
-> ![baseurl 경로에 category 폴더 생성]({{site.baseurl}}/images/category 폴더 추가.png)
+> ![baseurl 경로에 category 폴더 생성]({{site.baseurl}}/images/category_folder_add.png)
 
 블로그 프로젝트 디렉토리에 category 폴더를 생성하셨다면 이제 그 안에 `index.html` 파일을 만들어 줄 차례입니다.
 
