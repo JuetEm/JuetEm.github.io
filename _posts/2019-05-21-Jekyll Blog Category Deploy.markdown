@@ -8,8 +8,8 @@ tags:
     - category
     - customizing
     - tag
-	- jekyll
-	- blog
+    - jekyll
+    - blog
 comments: true
 ---
 
