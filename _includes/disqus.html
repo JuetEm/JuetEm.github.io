@@ -1,10 +1,6 @@
 {% if site.disqus %}
 <div class="comments">
-	{% unless request.path_and_query is string_containing "?hs_preview=" %}
-		{% unless request.full_url is string_containing "preview.hs-sites.com" %}
-		<div id="disqus_thread"></div>
-		{% endunless %}
-	{% endunless %}
+	<div id="disqus_thread"></div>
 	<script type="text/javascript">
 
 	    var disqus_shortname = '{{ site.disqus }}';
