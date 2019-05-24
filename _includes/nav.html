@@ -23,11 +23,16 @@
   </div>
   <script type="text/javascript">
 	$(document).ready(function(){
-		$("nav>a").hover(function(){
+		$("nav>a").hover(
+		function(){
 		{% assign nav = site.navigation %}
 		var name = $("nav>a").value;
 			console.log({{ nav.name }});
 			console.log("name : "+name);
+			console.log("hover out");
+		},
+		function(){
+			console.log("hover in");
 		});
 	});
   </script>
