@@ -26,13 +26,13 @@
 		$("nav>a").hover(
 		function(){
 		{% assign nav = site.navigation %}
-		var name = $("nav>a").value;
+		var name = $(this).value;
 			console.log({{ nav.name }});
 			console.log("name : "+name);
-			console.log("hover out");
+			console.log("hover in");
 		},
 		function(){
-			console.log("hover in");
+			console.log("hover out");
 		});
 	});
   </script>
