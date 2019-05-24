@@ -24,7 +24,10 @@
   <script type="text/javascript">
 	$(document).ready(function(){
 		$("nav>a").hover(function(){
+		{% assign nav = site.navigation %}
+		var name = $("nav>a").value;
 			console.log({{ nav.name }});
+			console.log("name : "+name);
 		});
 	});
   </script>
