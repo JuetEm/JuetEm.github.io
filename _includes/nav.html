@@ -27,13 +27,13 @@
 		function(){
 			console.log("hover in");
 			var id_check = $(this).attr("id");
-			console.log("id_check : "+id_check);
+			console.log("out id_check : "+id_check);
 			{% for nav in site.navigation %}
 			var tagName = $("#{{ nav.name }}").text();
 			console.log("tagName : "+tagName+", nav.name : "+{{ nav.name }});
 				{% if id_check == tagName %}
 				var name = $("#"+id_check).text();
-					console.log("id_check : " + id_check);
+					console.log("in id_check : " + id_check);
 					console.log("name : "+name);
 					
 				{% endif %}
