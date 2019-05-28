@@ -27,7 +27,7 @@
 		function(){
 			console.log("hover in");
 			{% for nav in site.navigation %}
-			var tagName = $("#"+{{ nav.name }}).text();
+			var tagName = $("#{{ nav.name }}").text();
 			console.log("tagName : "+tagName+", nav.name : "+{{ nav.name }});
 				{% if nav.name == tagName %}
 				var name = $({{ nav.name }}).text();
