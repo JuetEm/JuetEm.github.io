@@ -31,7 +31,7 @@
 			{% for nav in site.navigation %}
 			var tagName = $("#{{ nav.name }}").text();
 			console.log("tagName : "+tagName+", nav.name : "+{{ nav.name }});
-				{% if nav.name == tagName %}
+				{% if id_check == tagName %}
 				var name = $({{ nav.name }}).text();
 					console.log("nav.name : "+{{ nav.name }});
 					console.log("name : "+name);
