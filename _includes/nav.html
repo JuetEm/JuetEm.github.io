@@ -27,7 +27,7 @@
 		function(){
 		{% assign nav = site.navigation %}
 		var name = $("nav>a").text();
-			console.log({{ nav.name }});
+			console.log("nav : "+{{ nav }});
 			console.log("name : "+name);
 			console.log("hover in");
 		},
