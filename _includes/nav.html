@@ -26,6 +26,8 @@
 		$("nav>a").hover(
 		function(){
 			console.log("hover in");
+			var id_check = $(this).attr("id");
+			console.log("id_check : "+id_check);
 			{% for nav in site.navigation %}
 			var tagName = $("#{{ nav.name }}").text();
 			console.log("tagName : "+tagName+", nav.name : "+{{ nav.name }});
