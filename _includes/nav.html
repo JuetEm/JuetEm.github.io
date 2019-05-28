@@ -35,9 +35,6 @@
 			{% endif %}
 		},
 		function(){
-			{% for category in site.categories %}
-				$('#id_check').remove('<div>{{ category }}</div>');
-			{% endfor %}
 			console.log("hover out");
 		});
 	});
