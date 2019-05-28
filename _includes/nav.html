@@ -13,9 +13,9 @@
       <nav>
         {% for nav in site.navigation %}
         {% if nav.url contains 'http://' or nav.url contains 'https://' %}
-        <a href="{{ nav.url }}">{{ nav.name }}</a>
+        <a id="nav.name" href="{{ nav.url }}">{{ nav.name }}</a>
         {% else %}
-        <a href="{{ site.baseurl }}{{ nav.url }}">{{ nav.name }}</a>
+        <a id="nav.name" href="{{ site.baseurl }}{{ nav.url }}">{{ nav.name }}</a>
         {% endif %}
         {% endfor %}
       </nav>
@@ -25,11 +25,14 @@
 	$(document).ready(function(){
 		$("nav>a").hover(
 		function(){
-		{% assign nav = site.navigation %}
-		var name = $("nav>a").text();
-			console.log("nav : "+{{ nav }});
-			console.log("name : "+name);
-			console.log("hover in");
+			{% assign nav = site.navigation %}
+				
+				var name = $({{ nav.name }}).text();
+					console.log("nav.name : "+{{ nav.name }});
+					console.log("name : "+name);
+					console.log("hover in");
+					
+			
 		},
 		function(){
 			console.log("hover out");
