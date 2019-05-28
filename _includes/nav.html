@@ -32,8 +32,8 @@
 			var tagName = $("#{{ nav.name }}").text();
 			console.log("tagName : "+tagName+", nav.name : "+{{ nav.name }});
 				{% if id_check == tagName %}
-				var name = $({{ nav.name }}).text();
-					console.log("nav.name : "+{{ nav.name }});
+				var name = $("#"+id_check).text();
+					console.log("id_check : " + id_check);
 					console.log("name : "+name);
 					
 				{% endif %}
