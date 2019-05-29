@@ -247,4 +247,4 @@ title: Category <!-- Category 화면의 제목으로 뿌려집니다. -->
 [지킬 변수]: https://jekyllrb-ko.github.io/docs/variables/ 
 [Front Matter]: https://djkeh.github.io/articles/Hangul-test-jekyll-tips-kor/ 
 [카테고리 설정]: https://nolboo.kim/blog/2014/01/09/upgrade-jekyll-github-blog/#%ED%83%9C%EA%B7%B8%EC%99%80-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC 
-[지킬테마]: jekyllthemes.org
+[지킬테마]: http://jekyllthemes.org
