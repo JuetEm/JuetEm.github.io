@@ -72,7 +72,7 @@ Jekyll Blog 에 Category를 추가해보자!!
 
 Jekyll 은 테마를 선택해서 쉽게 적용할 수 있다는 장점이 있습니다.  
 
-`Jekyll Themes` 주소 : [jekyllthemes.org](jekyllthemes.org)  
+`Jekyll Themes` 주소 : [jekyllthemes.org][지킬테마]  
 
 이 블로그는 [kiko-now][키코 나우 페이지]라는 테마 템플렛을 커스터마아징 해서 사용하려고 합니다.  
 
@@ -247,3 +247,4 @@ title: Category <!-- Category 화면의 제목으로 뿌려집니다. -->
 [지킬 변수]: https://jekyllrb-ko.github.io/docs/variables/ 
 [Front Matter]: https://djkeh.github.io/articles/Hangul-test-jekyll-tips-kor/ 
 [카테고리 설정]: https://nolboo.kim/blog/2014/01/09/upgrade-jekyll-github-blog/#%ED%83%9C%EA%B7%B8%EC%99%80-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC 
+[지킬테마]: jekyllthemes.org
