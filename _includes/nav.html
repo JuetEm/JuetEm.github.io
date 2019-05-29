@@ -28,7 +28,7 @@
 			console.log("hover in");
 			var id_check = $(this).attr("id");
 			console.log("out id_check : "+id_check);
-			{% ifeual id_check "Category" %}
+			{% ifequal id_check "Category" %}
 			console.log("in id_check : "+id_check);
 				{% for category in site.categories %}
 					$('#id_check').append('<div>{{ category }}</div>');
