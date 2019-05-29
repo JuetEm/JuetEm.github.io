@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "어서 나와 시작해!(C\'mon and Start Me Up) - 스타트업"
+title:  "어서 나와 시작해! - 스타트업"
 date:   2019-05-29 10:51:55 +0900
 categories:
     - Interesting News
@@ -11,6 +11,7 @@ tags:
     - translation
     - korean
     - linked in
+	- C'mon and Start Me Up
 comments: true
 ---
 
