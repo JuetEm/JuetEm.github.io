@@ -22,4 +22,6 @@ Steve Knight
 Art of Comms app의 설립자
 <a href="artofcomms.com">artofcomms.com</a>
 
+
+
 [기사 원본]: https://www.linkedin.com/pulse/cmon-start-me-up-steve-knight/?trk=eml-email_feed_ecosystem_digest_01-recommended_articles-6-Unknown&midToken=AQHDdVsUNBVb4g&fromEmail=fromEmail&ut=2BoQnc-JmjvUM1
