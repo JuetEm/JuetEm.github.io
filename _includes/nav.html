@@ -15,7 +15,7 @@
         {% if nav.url contains 'http://' or nav.url contains 'https://' %}
         <a id="{{ nav.name }}" href="{{ nav.url }}">{{ nav.name }}</a>
         {% else %}
-        <a id="{{ nav.name }}" href="{{ site.baseurl }}{{ nav.url }}">{{ nav.name }}</a>
+        <a id="{{ nav.name }}" href="{{ site.baseurl }}{{ nav.url }}" target="_blank">{{ nav.name }}</a>
         {% endif %}
         {% endfor %}
       </nav>
