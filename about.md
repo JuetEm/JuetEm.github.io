@@ -15,4 +15,4 @@ permalink: /about/
 
 ### Contact me
 
-[sbkyo@naver.com](mailto:sbkyo@naver.com)
+[sbkyo88@gmail.com](mailto:sbkyo88@gmail.com)
