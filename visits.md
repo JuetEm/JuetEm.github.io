@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_visits
 title: Visits
 permalink: /visits/
 ---
