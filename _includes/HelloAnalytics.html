@@ -27,23 +27,63 @@
       root: 'https://analyticsreporting.googleapis.com/',
       method: 'POST',
       body: {
-        reportRequests: [
-          {
-            viewId: VIEW_ID,
-            dateRanges: [
-              {
-                startDate: '7daysAgo',
-                endDate: 'today'
-              }
-            ],
-            metrics: [
-              {
-                expression: 'ga:sessions'
-              }
-            ]
-          }
-        ]
-      }
+	  "reportRequests": [
+		{
+		  "viewId": "195185361",
+		  "dateRanges": [
+			{
+			  "startDate": "7daysAgo",
+			  "endDate": "yesterday"
+			}
+		  ],
+		  "metrics": [
+			{
+			  "expression": "ga:users"
+			},
+			{
+			  "expression": "ga:sessions"
+			},
+			{
+			  "expression": "ga:sessionDuration"
+			},
+			{
+			  "expression": "ga:pageviews"
+			},
+			{
+			  "expression": "ga:timeOnPage"
+			},
+			{
+			  "expression": "ga:hits"
+			}
+		  ],
+		  "dimensions": [
+			{
+			  "name": "ga:pagePath"
+			},
+			{
+			  "name": "ga:pageTitle"
+			},
+			{
+			  "name": "ga:region"
+			},
+			{
+			  "name": "ga:deviceCategory"
+			}
+		  ],
+		  "orderBys": [
+			{
+			  "fieldName": "ga:pageviews"
+			},
+			{
+			  "fieldName": "ga:timeOnPage"
+			},
+			{
+			  "fieldName": "ga:hits"
+			}
+		  ]
+		}
+	  ]
+	}
     }).then(displayResults, console.error.bind(console));
   }
 
