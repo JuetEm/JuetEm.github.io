@@ -8,6 +8,13 @@ permalink: /visits/
 
 주인장만 볼 수 있는 커스텀 페이지는 과연 적용 가능한가!?!?
 
+**방문자 수**
+<blockquote>
+	<div id="views">
+		방문자 수
+	</div>
+</blockquote>
+
 ### More Information
 
 ```
