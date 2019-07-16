@@ -5,5 +5,16 @@
 	console.log("visitCount : "+visitCount);
 		document.getElementById("views").innerHTML = visitCount;
 	}
+	
+	$(document).ready(function(){
+		console.log("jquery is now answer!!");
+		var visitsViews = "";
+		$('#jqueryVisitsButton').click(function(){
+			console.log("jquery-click functioning!!");
+			visitsViews = $('#visitsInput').value();
+			console.log("visitsViews : "+visitsViews);
+			$('#views').text(visitsViews);
+		});
+	});
 </script>
 

@@ -15,6 +15,7 @@ permalink: /visits/
 	</div>
 </blockquote>
 <input type="text" id="visitsInput" value="visits count"/><input type="button" id="visitsButton" onClick="input_text()" value="확인"/>
+<input type="button" id="jqueryVisitsButton" onClick="input_text()" value="확인(j-query)"/>
 
 ### More Information
 
