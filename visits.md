@@ -14,6 +14,7 @@ permalink: /visits/
 		방문자 수
 	</div>
 </blockquote>
+<input type="text" id="visitsInput" value="visits count"/><input type="button" id="visitsButton" onClick="input_text()" value="확인"/>
 
 ### More Information
 
