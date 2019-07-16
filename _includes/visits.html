@@ -11,7 +11,7 @@
 		var visitsViews = "";
 		$('#jqueryVisitsButton').on('click',function(){
 			console.log("jquery-click functioning!!");
-			visitsViews = $('#visitsInput').value();
+			visitsViews = $('#visitsInput').val();
 			console.log("visitsViews : "+visitsViews);
 			$('#views').text(visitsViews);
 		})(jQuery);
