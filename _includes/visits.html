@@ -6,6 +6,7 @@
 		document.getElementById("views").innerHTML = visitCount;
 	}
 	
+	<!-- jQuery '함수가 아닙니다.' 오류 버전 수정으로 해결하였으나 영 석연치 않음. lib 폴더 속에 .js 파일 참조 가능한 것 확인, .md 파일을 보여주는 html - layouts/page_visit.html 내부에 visits.html includ 시켜서 jQuery 사용 가능 확인 -->
 	$(document).ready(function(){
 		console.log("jquery is now answer!!");
 		var visitsViews = "";
