@@ -8,6 +8,13 @@ permalink: /visits/
 
 주인장만 볼 수 있는 커스텀 페이지는 과연 적용 가능한가!?!?
 
+오.....Jekyll Blog에 Google Analytics와 jqPlot 이라니!!! 와따시와 스고이네!!! 스게!!!ㅋㅋㅋㅋ
+
+물론 다 배낌!!! ㅋㅋㅋ
+
+Google Analytics : [https://nubiz.tistory.com/654](https://nubiz.tistory.com/654)
+jqPlot : [http://www.jqplot.com/examples/date-axes.php](http://www.jqplot.com/examples/date-axes.php)
+
 **방문자 수**
 <blockquote>
 	<div id="views">
